@@ -95,16 +95,15 @@
       <div class="container">
         <div class="row">
             <div class="col-md-12">
-              <center><strong><h4 style="color:white !important;">
-              Pemerintah Daerah Kabupaten Batang Hari<br>
-              &copy; 2017 Kecamatan Batin XXIV</h4> </strong>
+              <strong><h4 style="color:white !important;">
+              &copy; 2018 Kejaksaan Negeri Kab. Batang Hari<br>
+              </h4> </strong>
               <small style="color:white;">
                 <?php
                 $setting = DB::table('setting')->first();
                 ?>
                 {{$setting->alamat}}, <i class="fa fa-telephone"></i>Telp. {{$setting->telepon}} <i class="fa fa-mail"></i>Email: {{$setting->email}}
               </small>
-              </center>
               <br>
             </div>
           </div>

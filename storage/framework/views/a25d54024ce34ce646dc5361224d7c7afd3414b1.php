@@ -12,46 +12,7 @@
       <!-- Start News & Skill Section -->
       <div class="container">
           <div class="row">
-              <div class="col-lg-3 col-xs-12 hidden-xs">
-                <img class="img img-responsive" src="<?php echo e(asset('images/pimda.png')); ?>" >
-                <p class="hidden-xs">&nbsp;</p>
-                <div class="sidemenu">
-                    <p class="sidetitle">
-                      <center><img src="<?php echo e(asset('images/menu1.png')); ?>"  class="hidden-xs"></center>
-                    </p>
-                    <h4 class="classic-title hidden-lg hidden-md"><span>Profil Kecamatan</span></h4>
-                    <?php
-                    $profil = DB::table('profil')->select('id','nama')->get();
-                    ?>
-                    <ul class="listmenu">
-                    <?php foreach($profil as $p): ?>
-                      <?php
-                              $url = URL::to("profil/".$p->id."/".generate_url($p->nama));
-                          ?>
-                      <li><a href="<?php echo e($url); ?>"><?php echo e($p->nama); ?></a></li>
-                    <?php endforeach; ?>
-                    </ul>
-                </div>
-                <div class="sidemenu">
-                    <p class="sidetitle">
-                      <center><img src="<?php echo e(asset('images/menu2.png')); ?>"  class="hidden-xs"></center>
-                    </p>
-                    <h4 class="classic-title hidden-lg hidden-md"><span>Kelurahan dan Desa</span></h4>
-                    <?php
-                    $kelurahan = DB::table('kelurahan')->select('id','nama')->get();
-                    ?>
-                    <ul class="listmenu">
-                    <?php foreach($kelurahan as $p): ?>
-                      <?php
-                              $url = URL::to("kelurahan/".$p->id."/".generate_url($p->nama));
-                          ?>
-                      <li><a href="<?php echo e($url); ?>"><?php echo e($p->nama); ?></a></li>
-                    <?php endforeach; ?>
-                    </ul>
-                </div>
-                <p class="hidden-xs">&nbsp;</p><hr class="hidden-lg">
-              </div>
-              <div class="col-lg-6 col-xs-12">
+              <div class="col-lg-8 col-xs-12">
                 <img class="img img-responsive" src="<?php echo e(asset('images/welcome.png')); ?>">
                 <hr class="hidden-lg">
                 <p class="hidden-xs">&nbsp;</p>
@@ -137,7 +98,7 @@
                     <?php endforeach; ?>
                   <hr class="hidden-lg">
               </div>
-              <div class="col-lg-3 col-xs-12 hidden-lg hidden-md">
+              <div class="col-lg-4 col-xs-12 hidden-lg hidden-md">
                 <img class="img img-responsive  hidden-xs" src="<?php echo e(asset('images/pimda.png')); ?>" >
                 <p class="hidden-xs">&nbsp;</p>
                 <div class="sidemenu">
@@ -176,7 +137,7 @@
                 </div>
                 <p class="hidden-xs">&nbsp;</p><hr class="hidden-lg">
               </div>
-              <div class="col-lg-3 col-xs-12">
+              <div class="col-lg-4 col-xs-12">
                 <div class="sidemenu">
                     <p class="sidetitle">
                       <center><img src="<?php echo e(asset('images/menu3.png')); ?>"  class="hidden-xs"></center>
