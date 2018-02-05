@@ -14,9 +14,6 @@
       <div class="container">
           <div class="row">
               <div class="col-lg-8 col-xs-12">
-                <img class="img img-responsive" src="{{asset('images/welcome.png')}}">
-                <hr class="hidden-lg">
-                <p class="hidden-xs">&nbsp;</p>
                 <h4 class="classic-title"><span>Berita Terkini</span>
                 <small class="pull-right"><a href="{{url('semua-berita')}}">Semua Berita</a></small>
                 </h4>
@@ -97,46 +94,10 @@
                     @endforeach
                   <hr class="hidden-lg">
               </div>
-              <div class="col-lg-4 col-xs-12 hidden-lg hidden-md">
-                <img class="img img-responsive  hidden-xs" src="{{asset('images/pimda.png')}}" >
-                <p class="hidden-xs">&nbsp;</p>
-                <div class="sidemenu">
-                    <p class="sidetitle">
-                      <center><img src="{{asset('images/menu1.png')}}"  class="hidden-xs"></center>
-                    </p>
-                    <h4 class="classic-title hidden-lg hidden-md"><span>Profil Kecamatan</span></h4>
-                    <?php
-                    $profil = DB::table('profil')->select('id','nama')->get();
-                    ?>
-                    <ul class="listmenu">
-                    @foreach($profil as $p)
-                      <?php
-                              $url = URL::to("profil/".$p->id."/".generate_url($p->nama));
-                          ?>
-                      <li><a href="{{$url}}">{{$p->nama}}</a></li>
-                    @endforeach
-                    </ul>
-                </div>
-                <div class="sidemenu">
-                    <p class="sidetitle">
-                      <center><img src="{{asset('images/menu2.png')}}"  class="hidden-xs"></center>
-                    </p>
-                    <h4 class="classic-title hidden-lg hidden-md"><span>Kelurahan dan Desa</span></h4>
-                    <?php
-                    $kelurahan = DB::table('kelurahan')->select('id','nama')->get();
-                    ?>
-                    <ul class="listmenu">
-                    @foreach($kelurahan as $p)
-                      <?php
-                              $url = URL::to("kelurahan/".$p->id."/".generate_url($p->nama));
-                          ?>
-                      <li><a href="{{$url}}">{{$p->nama}}</a></li>
-                    @endforeach
-                    </ul>
-                </div>
-                <p class="hidden-xs">&nbsp;</p><hr class="hidden-lg">
-              </div>
               <div class="col-lg-4 col-xs-12">
+                <img class="img img-responsive" src="{{asset('images/welcome.png')}}">
+                <hr class="hidden-lg">
+                <p class="hidden-xs">&nbsp;</p>
                 <div class="sidemenu">
                     <p class="sidetitle">
                       <center><img src="{{asset('images/menu3.png')}}"  class="hidden-xs"></center>

@@ -8,16 +8,7 @@
             <a href="{{URL::to('/admin/berita')}}"><i class="fa fa-newspaper-o"></i> Berita</a>
         </li>
         <li @if($route=="profil") class="current" @endif>
-            <a href="{{URL::to('/admin/profil')}}"><i class="fa fa-building-o"></i> Profil Kecamatan</a>
-        </li>
-        <li @if($route=="kelurahan") class="current" @endif>
-            <a href="{{URL::to('/admin/kelurahan')}}"><i class="fa fa-ticket"></i> Kelurahan/Desa</a>
-        </li>
-        <li @if($route=="dataangka") class="current" @endif>
-            <a href="{{URL::to('/admin/dataangka')}}"><i class="fa fa-at"></i> Data Umum</a>
-        </li>
-        <li @if($route=="informasi") class="current" @endif>
-            <a href="{{URL::to('/admin/informasi')}}"><i class="fa fa-file-o"></i> Halaman Info</a>
+            <a href="{{URL::to('/admin/profil')}}"><i class="fa fa-building-o"></i> Profil Kejaksaan</a>
         </li>
         <li @if($route=="gallery") class="current" @endif>
             <a href="{{URL::to('/admin/gallery')}}"><i class="fa fa-image"></i> Gallery Photo</a>
@@ -28,9 +19,6 @@
         <li @if($route=="setting")class="current" @endif>
             <a href="{{URL::to('/admin/setting')}}">
             <i class="fa fa-info-circle" aria-hidden="true"></i>Informasi Kontak</a>
-        </li>
-        <li @if($route=="agenda")class="current" @endif>
-            <a href="{{URL::to('/admin/agenda')}}"><i class="fa fa-calendar"></i> Agenda</a>
         </li>
         <li>
             <a href="{{URL::to('')}}" target="_blank">

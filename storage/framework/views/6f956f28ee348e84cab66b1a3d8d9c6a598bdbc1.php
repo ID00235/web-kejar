@@ -8,16 +8,7 @@
             <a href="<?php echo e(URL::to('/admin/berita')); ?>"><i class="fa fa-newspaper-o"></i> Berita</a>
         </li>
         <li <?php if($route=="profil"): ?> class="current" <?php endif; ?>>
-            <a href="<?php echo e(URL::to('/admin/profil')); ?>"><i class="fa fa-building-o"></i> Profil Kecamatan</a>
-        </li>
-        <li <?php if($route=="kelurahan"): ?> class="current" <?php endif; ?>>
-            <a href="<?php echo e(URL::to('/admin/kelurahan')); ?>"><i class="fa fa-ticket"></i> Kelurahan/Desa</a>
-        </li>
-        <li <?php if($route=="dataangka"): ?> class="current" <?php endif; ?>>
-            <a href="<?php echo e(URL::to('/admin/dataangka')); ?>"><i class="fa fa-at"></i> Data Umum</a>
-        </li>
-        <li <?php if($route=="informasi"): ?> class="current" <?php endif; ?>>
-            <a href="<?php echo e(URL::to('/admin/informasi')); ?>"><i class="fa fa-file-o"></i> Halaman Info</a>
+            <a href="<?php echo e(URL::to('/admin/profil')); ?>"><i class="fa fa-building-o"></i> Profil Kejaksaan</a>
         </li>
         <li <?php if($route=="gallery"): ?> class="current" <?php endif; ?>>
             <a href="<?php echo e(URL::to('/admin/gallery')); ?>"><i class="fa fa-image"></i> Gallery Photo</a>
@@ -28,9 +19,6 @@
         <li <?php if($route=="setting"): ?>class="current" <?php endif; ?>>
             <a href="<?php echo e(URL::to('/admin/setting')); ?>">
             <i class="fa fa-info-circle" aria-hidden="true"></i>Informasi Kontak</a>
-        </li>
-        <li <?php if($route=="agenda"): ?>class="current" <?php endif; ?>>
-            <a href="<?php echo e(URL::to('/admin/agenda')); ?>"><i class="fa fa-calendar"></i> Agenda</a>
         </li>
         <li>
             <a href="<?php echo e(URL::to('')); ?>" target="_blank">
