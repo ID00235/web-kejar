@@ -11,7 +11,7 @@
 |
 */
 Route::get('/pass',function(){
-	return Hash::make('123456');
+	return Hash::make('123456sdggsd');
 });
 
 Route::get('/','Frontend\HomeController@index');
