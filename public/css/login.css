@@ -1,0 +1,161 @@
+.wrapper {
+    margin-top: 80px;
+    margin-bottom: 20px;
+}
+
+.form-signin {
+    width: 350px;
+    padding: 0px 30px 30px;
+    margin: 0 auto;
+    background-color:    #fff  ;
+    -webkit-box-shadow: 1px 1px 4px 0px rgba(140, 140, 140, 0.58);
+    -moz-box-shadow: 1px 1px 4px 0px rgba(140, 140, 140, 0.58);
+    box-shadow: 1px 1px 4px 0px rgba(140, 140, 140, 0.58);
+}
+
+.one-edge-shadow {
+    -webkit-box-shadow: 0 8px 6px -6px black;
+    -moz-box-shadow: 0 8px 6px -6px black;
+    box-shadow: 0 8px 6px -6px black;
+}
+
+.shadow {
+    -moz-box-shadow: 3px 3px 5px 6px #ccc;
+    -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+    box-shadow: 3px 3px 5px 6px #ccc;
+}
+
+.form-signin-heading {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.form-control {
+    position: relative;
+    font-size: 16px;
+    height: auto;
+    padding: 10px;
+}
+
+input[type="text"] {
+    margin-bottom: 0px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+input[type="password"] {
+    margin-bottom: 20px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.colorgraph {
+    height: 7px;
+    border-top: 0;
+    background: #c4e17f;
+    border-radius: 5px;
+    background-image: -webkit-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+    background-image: -moz-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+    background-image: -o-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+    background-image: linear-gradient(to right, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+}
+
+
+/* ribbon style */
+
+.h2 h2 {
+    color: #fff;
+    font-size: 1.2em;
+    padding: 7px 9px 5px 27px;
+    font-weight: 300;
+}
+
+ribbon-wrapper {
+    position: relative;
+}
+
+.ribbon-front {
+    background-image:url(../images/ribbon-login.png);
+    background-size: cover;
+    height: 50px;
+    width: 180px;
+    position: relative;
+    left: -99px;
+    z-index: 2;
+    top: 12px;
+    padding-top: 8px;
+    padding-left: 12px;
+    color:#fff;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.ribbon-edge-topleft,
+.ribbon-edge-topright,
+.ribbon-edge-bottomleft,
+.ribbon-edge-bottomright {
+    position: absolute;
+    z-index: 1;
+    border-style: solid;
+    height: 0px;
+    width: 0px;
+}
+
+.ribbon-edge-topleft,
+.ribbon-edge-topright {}
+
+.h2 .ribbon-edge-bottomleft,
+.h2 .ribbon-edge-bottomright {
+    top: 77px;
+}
+
+ .ribbon-edge-topleft,
+.ribbon-edge-bottomleft {
+    left:5px;
+    top: 52px;
+    border-color: transparent #e17e02 transparent transparent;
+}
+
+.ribbon-edge-topleft {
+    top: -0px;
+    border-width: 0px 10px 0 0;
+}
+
+.ribbon-edge-bottomleft {
+    border-width: 0 10px 15px 0;
+}
+
+.ribbon-edge-topright,
+.ribbon-edge-bottomright {
+    left: 180px;
+    border-color: transparent transparent transparent #e17e02;
+}
+
+.ribbon-edge-topright {
+    top: -0px;
+    border-width: 0px 0 0 0px;
+}
+
+ .ribbon-edge-bottomright {
+    border-width: 0 0 0px 0px;
+}
+
+.ribbon-edge-topleft2 {
+    position: absolute;
+    z-index: 1;
+    border-style: solid;
+    height: 0px;
+    width: 0px;
+}
+
+.ribbon-edge-topleft2 {
+    left: 151px;
+    border-color: transparent #ffa300 transparent transparent;
+}
+
+.ribbon-edge-topleft2 {
+    top: 12px;
+    border-width: 22px 20px 21px 37px;
+    transform: rotate(-180deg);
+    border-radius: 1px;
+}

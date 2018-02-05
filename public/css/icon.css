@@ -1,0 +1,35 @@
+.icon{
+    height: 45px;
+    width: 45px;
+    display: block;
+}
+.icon-dokumen{
+    background: url(../icon/dokumen.png) center center;
+    background-size: cover;
+}
+
+.icon-pengumuman{
+    background: url(../icon/pengumuman.png) center center;
+    background-size: cover;
+}
+
+
+.icon-gpr{
+    background: url(../icon/gpr.png) center center;
+    background-size: cover;
+}
+
+.icon-kategori-dokumen{
+     background: url(../icon/kategori-dokumen.png) center center;
+    background-size: cover;
+}
+
+.icon-layanan{
+    background: url(../icon/layanan.png) center center;
+    background-size: cover;
+}
+
+.icon-berita{
+    background: url(../icon/berita.png) center center;
+    background-size: cover;
+}
