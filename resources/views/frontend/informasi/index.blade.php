@@ -23,9 +23,7 @@
                   </div>
             </div>   
         </div>       
-        <div class="col-md-4">
-           
-
+        <div class="col-md-4">           
             <div class="sidemenu">
                     <h4 class="classic-title"><span>Informasi</span></h4>
                     <?php

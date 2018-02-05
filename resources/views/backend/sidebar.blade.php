@@ -10,6 +10,9 @@
         <li @if($route=="profil") class="current" @endif>
             <a href="{{URL::to('/admin/profil')}}"><i class="fa fa-building-o"></i> Profil Kejaksaan</a>
         </li>
+        <li @if($route=="organisasi") class="current" @endif>
+            <a href="{{URL::to('/admin/organisasi')}}"><i class="fa fa-building-o"></i> Organisasi Kejaksaan</a>
+        </li>
         <li @if($route=="gallery") class="current" @endif>
             <a href="{{URL::to('/admin/gallery')}}"><i class="fa fa-image"></i> Gallery Photo</a>
         </li>

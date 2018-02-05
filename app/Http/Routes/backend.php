@@ -75,48 +75,16 @@ Route::group(['middleware' => 'auth','middleware' => 'role:admin||operator'], fu
 			Route::post('/delete',"Backend\ProfilController@delete");
 		});
 
-		//ROUTER PROFIL   
-		Route::group(['prefix' => 'informasi' , 'middleware' => 'role:admin'], function () {
-			Route::get('/',"Backend\InformasiController@index");
-			Route::get('/baru',"Backend\InformasiController@baru");
-			Route::get('/detail/{cid}',"Backend\InformasiController@detail");
-			Route::get('/edit/{cid}',"Backend\InformasiController@edit");
-			Route::post('/store',"Backend\InformasiController@store");
-			Route::post('/update/{cid}',"Backend\InformasiController@update");
-			Route::post('/delete',"Backend\InformasiController@delete");
-		});
-
-		//ROUTER PROFIL   
-		Route::group(['prefix' => 'dataangka' , 'middleware' => 'role:admin'], function () {
-			Route::get('/',"Backend\DataAngkaController@index");
-			Route::get('/baru',"Backend\DataAngkaController@baru");
-			Route::get('/detail/{cid}',"Backend\DataAngkaController@detail");
-			Route::get('/edit/{cid}',"Backend\DataAngkaController@edit");
-			Route::post('/store',"Backend\DataAngkaController@store");
-			Route::post('/update/{cid}',"Backend\DataAngkaController@update");
-			Route::post('/delete',"Backend\DataAngkaController@delete");
-		});
-
-
-		//ROUTER AGENDA   
-		Route::group(['prefix' => 'agenda' , 'middleware' => 'role:admin'], function () {
-			Route::get('/',"Backend\AgendaController@index");
-			Route::get('/detail/{id}',"Backend\AgendaController@detail");
-			Route::post('/store',"Backend\AgendaController@store");
-			Route::post('/update/{cid}',"Backend\AgendaController@update");
-			Route::post('/delete',"Backend\AgendaController@delete");
-			Route::get('/list-agenda',"Backend\AgendaController@listagenda");
-		});
-
-		//ROUTER PROFIL KELURAHAN  
-		Route::group(['prefix' => 'kelurahan' , 'middleware' => 'role:admin'], function () {
-			Route::get('/',"Backend\KelurahanController@index");
-			Route::get('/baru',"Backend\KelurahanController@baru");
-			Route::get('/detail/{cid}',"Backend\KelurahanController@detail");
-			Route::get('/edit/{cid}',"Backend\KelurahanController@edit");
-			Route::post('/store',"Backend\KelurahanController@store");
-			Route::post('/update/{cid}',"Backend\KelurahanController@update");
-			Route::post('/delete',"Backend\KelurahanController@delete");
+		
+		//ROUTER ORGANISASI   
+		Route::group(['prefix' => 'organisasi' , 'middleware' => 'role:admin'], function () {
+			Route::get('/',"Backend\OrganisasiController@index");
+			Route::get('/baru',"Backend\OrganisasiController@baru");
+			Route::get('/detail/{cid}',"Backend\OrganisasiController@detail");
+			Route::get('/edit/{cid}',"Backend\OrganisasiController@edit");
+			Route::post('/store',"Backend\OrganisasiController@store");
+			Route::post('/update/{cid}',"Backend\OrganisasiController@update");
+			Route::post('/delete',"Backend\OrganisasiController@delete");
 		});
 
 

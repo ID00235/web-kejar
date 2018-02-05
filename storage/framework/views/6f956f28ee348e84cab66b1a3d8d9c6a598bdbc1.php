@@ -10,6 +10,9 @@
         <li <?php if($route=="profil"): ?> class="current" <?php endif; ?>>
             <a href="<?php echo e(URL::to('/admin/profil')); ?>"><i class="fa fa-building-o"></i> Profil Kejaksaan</a>
         </li>
+        <li <?php if($route=="organisasi"): ?> class="current" <?php endif; ?>>
+            <a href="<?php echo e(URL::to('/admin/organisasi')); ?>"><i class="fa fa-building-o"></i> Organisasi Kejaksaan</a>
+        </li>
         <li <?php if($route=="gallery"): ?> class="current" <?php endif; ?>>
             <a href="<?php echo e(URL::to('/admin/gallery')); ?>"><i class="fa fa-image"></i> Gallery Photo</a>
         </li>

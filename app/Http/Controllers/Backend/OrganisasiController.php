@@ -12,10 +12,10 @@ use Illuminate\Contracts\Encryption\DecryptException;
 use Symfony\Component\HttpKernel\Exception\HttpException;
 use Vinkla\Hashids\Facades\Hashids;
 
-use App\Models\Informasi;
+use App\Models\Organisasi;
 use Intervention\Image\ImageManagerStatic as Image;
 
-class InformasiController   extends Controller
+class OrganisasiController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -24,8 +24,8 @@ class InformasiController   extends Controller
      */
     public function index()
     {
-        return view('backend.informasi.index',
-            array("route"=>"informasi","subroute"=>"","informasi"=>informasi::all()));
+        return view('backend.organisasi.index',
+            array("route"=>"profil","subroute"=>"","profil"=>profil::all()));
     }
 
     /**
@@ -35,8 +35,8 @@ class InformasiController   extends Controller
      */
     public function baru()
     {
-         return view('backend.informasi.baru',
-            array("route"=>"informasi","subroute"=>""));
+         return view('backend.profil.baru',
+            array("route"=>"profil","subroute"=>""));
     }
 
     /**
@@ -54,13 +54,13 @@ class InformasiController   extends Controller
         "isi"=> addClassTable(addClassImages($request->input('isi')))
             );
 
-        $record = new Informasi;
-        $record->nama = $data["nama"];
-        $record->isi = $data["isi"];
-        $record->save();
+        $profil = new Profil;
+        $profil->nama = $data["nama"];
+        $profil->isi = $data["isi"];
+        $profil->save();
 
-        $request->session()->flash('notice', "Halaman  [".$data["nama"]."] Berhasil Ditambahkan!");
-        return redirect("admin/informasi/detail/".$record->gethashid());
+        $request->session()->flash('notice', "profil [".$data["nama"]."] Berhasil Ditambahkan!");
+        return redirect("admin/profil/detail/".$profil->gethashid());
     }
 
     /**
@@ -73,13 +73,13 @@ class InformasiController   extends Controller
     {
         $id = Hashids::decode($id)[0];
               
-        $record = Informasi::find($id);
+        $record = Profil::find($id);
         if (!$record ){
             throw new HttpException(401);
         }
         
-        return view('backend.informasi.detail',
-            array("route"=>"informasi","subroute"=>"","informasi"=>$record));
+        return view('backend.profil.detail',
+            array("route"=>"profil","subroute"=>"","profil"=>$record));
     }
 
     /**
@@ -91,12 +91,12 @@ class InformasiController   extends Controller
     public function edit($id)
     {
         $id = Hashids::decode($id)[0];
-        $record = Informasi::find($id);
+        $record = Profil::find($id);
         if (!$record){
             throw new HttpException(401);
         }
-        return view('backend.informasi.edit',
-            array("route"=>"informasi","subroute"=>"","record"=>$record));
+        return view('backend.profil.edit',
+            array("route"=>"profil","subroute"=>"","record"=>$record));
     }
 
     /**
@@ -114,7 +114,7 @@ class InformasiController   extends Controller
            throw new HttpException(401);
         }
               
-        $record = Informasi::find($id);
+        $record = Profil::find($id);
         if (!$record){
             throw new HttpException(401);
         }
@@ -127,9 +127,9 @@ class InformasiController   extends Controller
                 "nama"=>$request->input('nama'),
                  "isi"=> addClassTable(addClassImages($request->input('isi')))
         );
-        DB::table('informasi')->where('id',$id)->update($data);
-        $request->session()->flash('notice', "Halaman [".$data["nama"]."] Berhasil Disimpan!");
-        return redirect("admin/informasi/detail/".$record->gethashid());
+        DB::table('profil')->where('id',$id)->update($data);
+        $request->session()->flash('notice', "Profil [".$data["nama"]."] Berhasil Disimpan!");
+        return redirect("admin/profil/detail/".$record->gethashid());
     }
 
     /**
@@ -143,15 +143,15 @@ class InformasiController   extends Controller
         $id = $request->input('post_id');
         $id = Hashids::decode($id)[0];
               
-        $record = Informasi::find($id);
+        $record = Profil::find($id);
         if (!$record ){
             throw new HttpException(401);
         }
 
         $nama =$record->nama;
         if($record->delete()){
-            $request->session()->flash('notice', "Halaman Data Angka: [$nama] Berhasil Dihapus!");
-            return redirect("admin/informasi");
+            $request->session()->flash('notice', "Profil: [$nama] Berhasil Dihapus!");
+            return redirect("admin/profil");
         }
 
         throw new HttpException(503);

@@ -32,9 +32,6 @@ Route::get('gallery-photo','Frontend\GalleryController@photo');
 
 //PROFIL
 Route::get('profil/{id}/{nama}','Frontend\ProfilController@index');
-Route::get('kelurahan/{id}/{nama}','Frontend\HalamanController@kelurahan');
-Route::get('dataumum/{id}/{nama}','Frontend\HalamanController@dataumum');
-Route::get('informasi/{id}/{nama}','Frontend\HalamanController@informasi');
 
 
 
