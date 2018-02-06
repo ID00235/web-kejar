@@ -70,6 +70,7 @@ $setting = DB::table('setting')->first();
             <li @if($route=="beranda") class="active" @endif><a href="{{URL::to("/")}}">Home</a></li>
             <li @if($route=="berita") class="active" @endif><a href="{{URL::to("semua-berita")}}">Berita</a></li>
             <li @if($route=="profil") class="active" @endif>
+            <li @if($route=="organisasi") class="active" @endif>
               <a href="#">Profil Kecamatan</a>
               <ul class="dropdown">
                 <?php
@@ -81,44 +82,7 @@ $setting = DB::table('setting')->first();
                 @endforeach
               </ul>
             </li>
-            <li @if($route=="kelurahan") class="active" @endif>
-                <a href="#">Kelurahan dan Desa</a>
-                <ul class="dropdown">
-                  <?php
-                    $kelurahan = $menu["kelurahan"];
-                  ?>
-                  @foreach($kelurahan as $p)
-                  <li><a href="{{URL::to("kelurahan"."/".$p->id."/".generate_url($p->nama))}}">{{$p->nama}}</a>
-                  </li>
-                  @endforeach
-                </ul>
-              </li>
-              <li @if($route=="dataumum") class="active" @endif>
-                  <a href="#">Data Umum</a>
-                  <?php
-                    $dataumum = $menu["dataumum"];
-                  ?>
-                  <ul class="dropdown">        
-                    @foreach($dataumum as $p)
-                      <li>
-                        <a href="{{URL::to("dataumum/".$p->id."/".generate_url($p->nama))}}">{{$p->nama}}</a>
-                     </li>
-                    @endforeach        
-                  </ul>
-              </li>
-              <li @if($route=="informasi") class="active" @endif>
-                  <a href="#">Informasi</a>
-                  <?php
-                    $informasi = $menu["informasi"];
-                  ?>
-                  <ul class="dropdown">        
-                    @foreach($informasi as $p)
-                      <li>
-                        <a href="{{URL::to("informasi/".$p->id."/".generate_url($p->nama))}}">{{$p->nama}}</a>
-                     </li>
-                    @endforeach        
-                  </ul>
-              </li>
+            
             <li @if($route=="gallery") class="active" @endif>
                 <a href="{{url::to("gallery")}}">Gallery</a>
             </li>

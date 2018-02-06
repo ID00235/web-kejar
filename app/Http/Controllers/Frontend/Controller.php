@@ -8,9 +8,7 @@ use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesResources;
 use App\Models\Profil;
-use App\Models\Kelurahan;
-use App\Models\Informasi;
-use App\Models\DataAngka;
+use App\Models\Organisasi;
 use SEOMeta;
 use OpenGraph;
 use Twitter;
@@ -22,11 +20,12 @@ class Controller extends BaseController
 
     public function getlistmenu(){
     	$profil = Profil::select('id','nama')->get();
-        $kelurahan = Kelurahan::select('id','nama')->get();
-        $informasi = Informasi::select('id','nama')->get();
-    	$dataumum = DataAngka::select('id','nama')->get();
-    	return array("profil"=>$profil,"kelurahan"=>$kelurahan, "informasi"=>$informasi, "dataumum"=>$dataumum);
+        $organisasi = Organisasi::select('id','nama')->get();
+        
+    	return array("profil"=>$profil,"organisasi"=>$organisasi);
     }
+
+   
 
     public function setSEO($title, $description, $url, $image){
     	SEOMeta::setTitle($title);
