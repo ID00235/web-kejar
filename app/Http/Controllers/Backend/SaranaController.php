@@ -54,13 +54,13 @@ class SaranaController extends Controller
         "isi"=> addClassTable(addClassImages($request->input('isi')))
             );
 
-        $profil = new Profil;
-        $profil->nama = $data["nama"];
-        $profil->isi = $data["isi"];
-        $profil->save();
+        $sarana         = new Sarana;
+        $sarana->nama   = $data["nama"];
+        $sarana->isi    = $data["isi"];
+        $sarana->save();
 
-        $request->session()->flash('notice', "profil [".$data["nama"]."] Berhasil Ditambahkan!");
-        return redirect("admin/profil/detail/".$profil->gethashid());
+        $request->session()->flash('notice', "sarana [".$data["nama"]."] Berhasil Ditambahkan!");
+        return redirect("admin/sarana/detail/".$sarana->gethashid());
     }
 
     /**
@@ -73,13 +73,13 @@ class SaranaController extends Controller
     {
         $id = Hashids::decode($id)[0];
               
-        $record = Profil::find($id);
+        $record = Sarana::find($id);
         if (!$record ){
             throw new HttpException(401);
         }
         
-        return view('backend.profil.detail',
-            array("route"=>"profil","subroute"=>"","profil"=>$record));
+        return view('backend.sarana.detail',
+            array("route"=>"sarana","subroute"=>"","sarana"=>$record));
     }
 
     /**
@@ -91,12 +91,12 @@ class SaranaController extends Controller
     public function edit($id)
     {
         $id = Hashids::decode($id)[0];
-        $record = Profil::find($id);
+        $record = sarana::find($id);
         if (!$record){
             throw new HttpException(401);
         }
-        return view('backend.profil.edit',
-            array("route"=>"profil","subroute"=>"","record"=>$record));
+        return view('backend.sarana.edit',
+            array("route"=>"sarana","subroute"=>"","record"=>$record));
     }
 
     /**
@@ -114,7 +114,7 @@ class SaranaController extends Controller
            throw new HttpException(401);
         }
               
-        $record = Profil::find($id);
+        $record = sarana::find($id);
         if (!$record){
             throw new HttpException(401);
         }
@@ -127,9 +127,9 @@ class SaranaController extends Controller
                 "nama"=>$request->input('nama'),
                  "isi"=> addClassTable(addClassImages($request->input('isi')))
         );
-        DB::table('profil')->where('id',$id)->update($data);
-        $request->session()->flash('notice', "Profil [".$data["nama"]."] Berhasil Disimpan!");
-        return redirect("admin/profil/detail/".$record->gethashid());
+        DB::table('sarana')->where('id',$id)->update($data);
+        $request->session()->flash('notice', "Sarana [".$data["nama"]."] Berhasil Disimpan!");
+        return redirect("admin/sarana/detail/".$record->gethashid());
     }
 
     /**
@@ -143,15 +143,15 @@ class SaranaController extends Controller
         $id = $request->input('post_id');
         $id = Hashids::decode($id)[0];
               
-        $record = Profil::find($id);
+        $record = sarana::find($id);
         if (!$record ){
             throw new HttpException(401);
         }
 
         $nama =$record->nama;
         if($record->delete()){
-            $request->session()->flash('notice', "Profil: [$nama] Berhasil Dihapus!");
-            return redirect("admin/profil");
+            $request->session()->flash('notice', "Sarana: [$nama] Berhasil Dihapus!");
+            return redirect("admin/sarana");
         }
 
         throw new HttpException(503);
