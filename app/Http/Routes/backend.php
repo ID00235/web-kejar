@@ -99,6 +99,11 @@ Route::group(['middleware' => 'auth','middleware' => 'role:admin||operator'], fu
 			Route::post('/delete',"Backend\PenggunaController@delete"); 
 		});
 
+		//ROUTER Sarana
+		Route::group(['prefix'=>'sarana','middleware' => 'role:admin'], function(){
+			Route::get('/',"Backend\SaranaController@index");
+		});
+
 		
 
 		//PENGATURAN AKUN USER

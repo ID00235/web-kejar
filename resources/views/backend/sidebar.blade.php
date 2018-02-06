@@ -13,6 +13,9 @@
         <li @if($route=="organisasi") class="current" @endif>
             <a href="{{URL::to('/admin/organisasi')}}"><i class="fa fa-building-o"></i> Organisasi Kejaksaan</a>
         </li>
+        <li @if($route=="sarana") class="current" @endif>
+            <a href="{{URL::to('/admin/sarana')}}"><i class="fa fa-building-o"></i> Sarana Kejaksaan</a>
+        </li>
         <li @if($route=="gallery") class="current" @endif>
             <a href="{{URL::to('/admin/gallery')}}"><i class="fa fa-image"></i> Gallery Photo</a>
         </li>
