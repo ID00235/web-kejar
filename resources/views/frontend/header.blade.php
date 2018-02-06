@@ -43,6 +43,19 @@ $setting = DB::table('setting')->first();
                   @endforeach
                 </ul>
               </li>
+
+               <li @if($route=="organisasi") class="active" @endif>
+                <a href="#">Organisasi</a>
+                <ul class="dropdown">
+                  <?php
+                    $organisasi = $menu["organisasi"];
+                  ?>
+                  @foreach($organisasi as $p)
+                  <li><a href="{{URL::to("organisasi"."/".$p->id."/".generate_url($p->nama))}}">{{$p->nama}}</a>
+                  </li>
+                  @endforeach
+                </ul>
+              </li>
               
               <li @if($route=="gallery") class="active" @endif>
                 <a href="{{url::to("gallery-photo")}}">Gallery</a>
