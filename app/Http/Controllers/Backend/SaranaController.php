@@ -25,7 +25,7 @@ class SaranaController extends Controller
     public function index()
     {
         return view('backend.sarana.index',
-            array("route"=>"sarana","subroute"=>"","sarana"=>Sarana::all()));
+            array("route"=>"sarana","subroute"=>"","sarana"=>sarana::all()));
     }
 
     /**

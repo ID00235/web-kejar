@@ -7,7 +7,7 @@
                 <div class="panel-title">Halaman Sarana Kejaksaan</div>
             </div>
             <div class="panel-body">
-            <a href="{{URL::to("admin/sarana/baru")}}" data-rel="reload" class="btn btn-primary btn-outline btn-sm"><i class="fa fa-plus"></i> Halaman Baru</a>
+            <a href="{{URL::to("admin/profil/baru")}}" data-rel="reload" class="btn btn-primary btn-outline btn-sm"><i class="fa fa-plus"></i> Halaman Baru</a>
                <table id="tabel1" class="table table-striped table-condensed table-hover">
 		              <thead>
 		                <tr>
