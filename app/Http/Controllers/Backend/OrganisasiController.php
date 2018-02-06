@@ -25,7 +25,7 @@ class OrganisasiController extends Controller
     public function index()
     {
         return view('backend.organisasi.index',
-            array("route"=>"profil","subroute"=>"","profil"=>profil::all()));
+            array("route"=>"organisasi","subroute"=>"","organisasi"=>organisasi::all()));
     }
 
     /**
@@ -35,8 +35,8 @@ class OrganisasiController extends Controller
      */
     public function baru()
     {
-         return view('backend.profil.baru',
-            array("route"=>"profil","subroute"=>""));
+         return view('backend.organisasi.baru',
+            array("route"=>"organisasi","subroute"=>""));
     }
 
     /**
@@ -54,13 +54,13 @@ class OrganisasiController extends Controller
         "isi"=> addClassTable(addClassImages($request->input('isi')))
             );
 
-        $profil = new Profil;
-        $profil->nama = $data["nama"];
-        $profil->isi = $data["isi"];
-        $profil->save();
+        $organisasi = new Organisasi;
+        $organisasi->nama = $data["nama"];
+        $organisasi->isi = $data["isi"];
+        $organisasi->save();
 
-        $request->session()->flash('notice', "profil [".$data["nama"]."] Berhasil Ditambahkan!");
-        return redirect("admin/profil/detail/".$profil->gethashid());
+        $request->session()->flash('notice', "organisasi [".$data["nama"]."] Berhasil Ditambahkan!");
+        return redirect("admin/organisasi/detail/".$organisasi->gethashid());
     }
 
     /**
@@ -73,13 +73,13 @@ class OrganisasiController extends Controller
     {
         $id = Hashids::decode($id)[0];
               
-        $record = Profil::find($id);
+        $record = Organisasi::find($id);
         if (!$record ){
             throw new HttpException(401);
         }
         
-        return view('backend.profil.detail',
-            array("route"=>"profil","subroute"=>"","profil"=>$record));
+        return view('backend.organisasi.detail',
+            array("route"=>"organisasi","subroute"=>"","organisasi"=>$record));
     }
 
     /**
@@ -91,12 +91,12 @@ class OrganisasiController extends Controller
     public function edit($id)
     {
         $id = Hashids::decode($id)[0];
-        $record = Profil::find($id);
+        $record = Organisasi::find($id);
         if (!$record){
             throw new HttpException(401);
         }
-        return view('backend.profil.edit',
-            array("route"=>"profil","subroute"=>"","record"=>$record));
+        return view('backend.organisasi.edit',
+            array("route"=>"organisasi","subroute"=>"","record"=>$record));
     }
 
     /**
@@ -114,7 +114,7 @@ class OrganisasiController extends Controller
            throw new HttpException(401);
         }
               
-        $record = Profil::find($id);
+        $record = Organisasi::find($id);
         if (!$record){
             throw new HttpException(401);
         }
@@ -127,9 +127,9 @@ class OrganisasiController extends Controller
                 "nama"=>$request->input('nama'),
                  "isi"=> addClassTable(addClassImages($request->input('isi')))
         );
-        DB::table('profil')->where('id',$id)->update($data);
-        $request->session()->flash('notice', "Profil [".$data["nama"]."] Berhasil Disimpan!");
-        return redirect("admin/profil/detail/".$record->gethashid());
+        DB::table('organisasi')->where('id',$id)->update($data);
+        $request->session()->flash('notice', "Organisasi [".$data["nama"]."] Berhasil Disimpan!");
+        return redirect("admin/organisasi/detail/".$record->gethashid());
     }
 
     /**
@@ -143,15 +143,15 @@ class OrganisasiController extends Controller
         $id = $request->input('post_id');
         $id = Hashids::decode($id)[0];
               
-        $record = Profil::find($id);
+        $record = Organisasi::find($id);
         if (!$record ){
             throw new HttpException(401);
         }
 
         $nama =$record->nama;
         if($record->delete()){
-            $request->session()->flash('notice', "Profil: [$nama] Berhasil Dihapus!");
-            return redirect("admin/profil");
+            $request->session()->flash('notice', "Organisasi: [$nama] Berhasil Dihapus!");
+            return redirect("admin/organisasi");
         }
 
         throw new HttpException(503);
