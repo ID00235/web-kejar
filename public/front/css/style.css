@@ -533,7 +533,7 @@ ul.social-list li:last-child a i {
 }
 .navbar {
 	margin-bottom: 0;
-	background: #fff;
+	background: #03623B;
 	border: none;
 	border-radius: 0;
     -webkit-border-radius: 0;
@@ -569,22 +569,19 @@ ul.social-list li:last-child a i {
 }
 
 .navbar-default .navbar-nav > li > a {
-	color: #999;
+	color: #fff;
 	display: block;
-    font-size: 14px;
-	font-weight: 400;
+    font-size: 15px;
+	font-weight: bold;
     padding: 28px 15px 28px 15px;
 	overflow: hidden;
     transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
     -webkit-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
-    font-weight: 400;
 }
 
-.navbar-default .navbar-nav > li > a.active, .navbar-default .navbar-nav > li:hover > a {
-	border-bottom: 2px solid;
-}
+
 
 .navbar-default .navbar-nav > li > a i {
 	margin: 0 -2px 0 -5px;
