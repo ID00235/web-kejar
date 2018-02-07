@@ -44,9 +44,9 @@ class SaranaController extends MainControler
       } 
 
        $url = URL::to('sarana/'.$sarana->id.'/'.generate_url($sarana->judul));
-     /* $gambar = URL::to('images/ppid-share.png');
+     $gambar = URL::to('images/ppid-share.png');
       $this->setSEO($sarana->nama,gettextdeskripsi($sarana->isi),$url,$gambar);
-      */
+      
       return view('frontend.sarana.index',array("route"=>"sarana", "menu"=>$menu, 
         "sarana"=>$sarana));
     }

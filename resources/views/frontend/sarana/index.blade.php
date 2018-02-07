@@ -21,7 +21,7 @@
                   <div class="post-isi">
                       <?php echo $sarana->isi;?>
                   </div>
-            </div>   
+            </div>  
         </div>       
         <div class="col-md-4">
             <div class="sidemenu">
