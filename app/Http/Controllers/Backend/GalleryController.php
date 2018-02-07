@@ -99,10 +99,10 @@ class GalleryController extends Controller
             $filename = "gallery/photo/".$fileupload;
             $thumbs = "gallery/photo/". $fileupload_thumbs;
 
-            Image::make($file)->resize(680,null, function ($constraint) {
+            Image::make($file)->resize(1200,null, function ($constraint) {
                 $constraint->aspectRatio();
             })->save($filename);
-            Image::make($file)->resize(400,null, function ($constraint) {
+            Image::make($file)->resize(600,null, function ($constraint) {
                 $constraint->aspectRatio();
             })->save($thumbs);
 
