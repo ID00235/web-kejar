@@ -39,6 +39,9 @@ Route::get('organisasi/{id}/{nama}','Frontend\OrganisasiController@index');
 Route::get('peraturan','Frontend\PeraturanController@index');
 Route::get('konsultasi','Frontend\KonsultasiController@index');
 
+//
+Route::get('sarana/{id}/{nama}','Frontend\SaranaController@index');
+
 
 
 Route::group(['prefix' => 'login'], function()
