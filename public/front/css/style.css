@@ -571,9 +571,9 @@ ul.social-list li:last-child a i {
 .navbar-default .navbar-nav > li > a {
 	color: #fff;
 	display: block;
-    font-size: 15px;
+    font-size: 14px;
 	font-weight: bold;
-    padding: 28px 15px 28px 15px;
+    padding: 28px 10px 28px 10px;
 	overflow: hidden;
     transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
@@ -5884,4 +5884,7 @@ ul.listnews > li > a:hover{
 .mb-20{
 	margin-bottom: 20px;
 	display: block;
+}
+.page-content{
+	min-height: 450px;
 }

@@ -16,7 +16,8 @@ use Symfony\Component\HttpKernel\Exception\HttpException;
 use App\Models\FileDokumen;
 use App\Http\Controllers\Frontend\Controller as MainControler;
 use App\Models\Peraturan;
-class Peraturan extends MainControler
+
+class PeraturanController extends MainControler
 {
     //
     public function index(){

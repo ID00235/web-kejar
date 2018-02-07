@@ -44,11 +44,11 @@ a.main-button, input[type="submit"] {
 }
 .navbar-default .navbar-nav > li:hover > a,
 .navbar-default .navbar-nav > li > a.active {
-	color:  #f39c12 ;
+	color:  #f3d912 ;
 }
 
 .dropdown > li:hover > a, .sup-dropdown li:hover > a {
-	color: #f39c12;
+	color: #f3d912;
 }
 
 .navbar-default .navbar-nav > li > a:after {
@@ -56,7 +56,7 @@ a.main-button, input[type="submit"] {
 }
 
 .navbar-default .navbar-nav > li > a.active, .navbar-default .navbar-nav > li:hover > a {
-	border-color: #f39c12;
+	border-color: #f3d912;
 
 }
 
@@ -133,20 +133,20 @@ ul.breadcrumbs li a:hover {
 }
 
 .btn-system {
-	background-color: #f39c12 ;
+	background-color: #f3d912 ;
 }
 
 .btn-system.border-btn {
-	border-color: #f39c12;
-	color: #f39c12;
+	border-color: #f3d912;
+	color: #f3d912;
 }
 
 .btn-system.border-btn:hover {
-	background-color: #f39c12;
+	background-color: #f3d912;
 }
 
 .btn-system.border-btn.btn-wite:hover {
-	color: #f39c12;
+	color: #f3d912;
 }
 
 .btn-system.btn-wite{
