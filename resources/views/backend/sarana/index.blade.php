@@ -7,7 +7,7 @@
                 <div class="panel-title">Halaman Sarana Kejaksaan</div>
             </div>
             <div class="panel-body">
-            <a href="{{URL::to("admin/profil/baru")}}" data-rel="reload" class="btn btn-primary btn-outline btn-sm"><i class="fa fa-plus"></i> Halaman Baru</a>
+            <a href="{{URL::to("admin/sarana/baru")}}" data-rel="reload" class="btn btn-primary btn-outline btn-sm"><i class="fa fa-plus"></i> Halaman Baru</a>
                <table id="tabel1" class="table table-striped table-condensed table-hover">
 		              <thead>
 		                <tr>
@@ -18,13 +18,13 @@
 		              </thead>
 		              <tbody>
 		              <?php $no=0;?>
-		              		@foreach($profil as $row)
+		              		@foreach($sarana as $row)
 		              			<?php  $no++;?>
 		              			<tr>
 		              				<td>{{$no}}</td>
-		              				<td><a href="{{URL::to('admin/profil/detail/'.$row->gethashid())}}" class="big2">{{$row->nama}}</a></td>
+		              				<td><a href="{{URL::to('admin/sarana/detail/'.$row->gethashid())}}" class="big2">{{$row->nama}}</a></td>
 		              				<td>
-		              					<a href="{{URL::to("admin/profil/edit/".$row->gethashid())}}" class="btn btn-sm  btn-outline btn-success" title="Edit"><i class="fa fa-pencil"></i> Edit</a>
+		              					<a href="{{URL::to("admin/sarana/edit/".$row->gethashid())}}" class="btn btn-sm  btn-outline btn-success" title="Edit"><i class="fa fa-pencil"></i> Edit</a>
 		              					<button href="#" data-id="{{$row->gethashid()}}" data-nama="{{$row->nama}}" class="btn-del btn  btn-danger btn-sm  btn-outline" title="Hapus"><i class="fa fa-times"></i> Hapus</button>
 		              				</td>
 		              			</tr>
@@ -35,7 +35,7 @@
         </div>
     </div>
 </div>
-<form action="{{URL::to('admin/profil/delete')}}" method="post" id="form-delete">
+<form action="{{URL::to('admin/sarana/delete')}}" method="post" id="form-delete">
     {{csrf_field()}}
     <input type="hidden" name="post_id"  id="post_id">
 </form>
@@ -56,7 +56,7 @@
 	     	$("#post_id").val(post_id);
 
 	     	    bootbox.confirm({
-		        message: "Anda Yakin Ingin Menghapus profil: <br><strong>" + nama + "</strong>",
+		        message: "Anda Yakin Ingin Menghapus sarana: <br><strong>" + nama + "</strong>",
 		        buttons: {
 		            confirm: {
 		                label: 'Ya, Hapus',

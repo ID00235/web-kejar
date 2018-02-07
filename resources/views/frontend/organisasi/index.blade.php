@@ -1,6 +1,6 @@
 @extends('frontend.layout')
-@section("pagetitle","Profil Kecamatan")
-@section("subpage","Profil Kecamatan Batin XXIV")
+@section("pagetitle","Organisasi Kejaksaan Negeri")
+@section("subpage","Batanghari")
 @section("pageslider")
 @include("frontend.pagetop")
 @endsection
@@ -16,23 +16,23 @@
         <div class="col-md-7">
             <div class="blog-post gallery-post">
                   <div class="post-title">
-                      <h3 class=""><a href="{{Request::url()}}"><span>{{$profil->nama}}</span></a></h3>
+                      <h3 class=""><a href="{{Request::url()}}"><span>{{$organisasi->nama}}</span></a></h3>
                   </div>
                   <div class="post-isi">
-                      <?php echo $profil->isi;?>
+                      <?php echo $organisasi->isi;?>
                   </div>
             </div>   
         </div>       
         <div class="col-md-4">
             <div class="sidemenu">
-                    <h4 class="classic-title"><span>Profil Kecamatan</span></h4>
+                    <h4 class="classic-title"><span>Organisasi Pengadilan Negeri Batanghari</span></h4>
                     <?php
-                      $profil = DB::table('profil')->select('id','nama')->get();
+                      $organisasi = DB::table('organisasi')->select('id','nama')->get();
                     ?>
                     <ul class="listmenu">
-                    @foreach($profil as $p)
+                    @foreach($organisasi as $p)
                       <?php
-                              $url = URL::to("profil/".$p->id."/".generate_url($p->nama));
+                              $url = URL::to("organisasi/".$p->id."/".generate_url($p->nama));
                           ?>
                       <li><a href="{{$url}}">{{$p->nama}}</a></li>
                     @endforeach

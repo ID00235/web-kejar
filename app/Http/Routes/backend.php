@@ -102,6 +102,12 @@ Route::group(['middleware' => 'auth','middleware' => 'role:admin||operator'], fu
 		//ROUTER Sarana
 		Route::group(['prefix'=>'sarana','middleware' => 'role:admin'], function(){
 			Route::get('/',"Backend\SaranaController@index");
+			Route::get('/baru',"Backend\SaranaController@baru");
+			Route::get('/detail/{cid}',"Backend\SaranaController@detail");
+			Route::get('/edit/{cid}',"Backend\SaranaController@edit");
+			Route::post('/store',"Backend\SaranaController@store");
+			Route::post('/update/{cid}',"Backend\SaranaController@update");
+			Route::post('/delete',"Backend\SaranaController@delete"); 
 		});
 
 		

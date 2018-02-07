@@ -33,6 +33,8 @@ Route::get('gallery-photo','Frontend\GalleryController@photo');
 //PROFIL
 Route::get('profil/{id}/{nama}','Frontend\ProfilController@index');
 
+//PROFIL
+Route::get('organisasi/{id}/{nama}','Frontend\OrganisasiController@index');
 
 
 Route::group(['prefix' => 'login'], function()

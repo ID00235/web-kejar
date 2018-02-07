@@ -8,24 +8,24 @@
     <div class="col-md-12">
         <div class="content-box-large">
             <div class="panel-heading">
-                <div class="panel-title"><i class="fa fa-plus"></i> Buat Halaman Baru</div>
+                <div class="panel-title">Edit Halaman</div>
                 <div class="panel-options">
-                  <a href="{{URL::to("admin/sarana/")}}" data-rel="reload" class="btn btn-outline btn-default btn-sm"><i class="fa fa-angle-left"></i> Kembali Ke Index Sarana</a>
+                  <a href="{{URL::to("admin/sarana/")}}" data-rel="reload" class="btn btn-outline btn-default btn-sm"><i class="fa fa-angle-left"></i> Kembali Ke Index Sarana </a>
                 </div>
             </div>
             <div class="panel-body">
             <?php
-                $nama = old('nama') ? old('nama'):"";
-                $isi = old('isi') ? old('isi'):"";
-
+                $nama = old('nama') ? old('nama'):$record->nama;
+                $isi = old('isi') ? old('isi'):$record->isi;
             ?>
-                <form action="{{URL::to('admin/sarana/store')}}" method="POST">
+               
+                <form action="{{URL::to('admin/sarana/update/'.Crypt::encrypt($record->id))}}" method="POST">
                         {{csrf_field()}}
                         <fieldset>
                             <div class="col-md-12">
                                 <div class="form-group @if($errors->has('nama')) has-error @endif">
-                                    <label>Nama</label>
-                                    <input class="form-control" name="nama"  value="{{$nama}}" placeholder="Masukan Nama Sarana" type="text">
+                                    <label>Nama Sarana</label>
+                                    <input class="form-control" name="nama"  value="{{$nama}}" placeholder="Masukan Nama Profil" type="text">
                                     @if($errors->has('nama'))
                                     <span class="help-block">Kolom Ini Harus Diisi</span>
                                     @endif
@@ -33,19 +33,18 @@
                             </div>
                             <div class="col-md-12">
                                 <div class="form-group @if($errors->has('isi')) has-error @endif">
-                                    <label>Deskripsi</label>
+                                    <label>Isi/Deskripsi</label>
                                     <textarea id="editor" name="isi">{{$isi}}</textarea>
                                     @if($errors->has('isi'))
                                     <span class="help-block">Kolom Ini Harus Diisi</span>
                                     @endif
                                 </div>
-                            </div>     
-                                            
+                            </div>                     
                         </fieldset>
                         <hr>
                         <div>
                             <div class="col-md-12">
-                                <button class="btn btn-success btn-sm btn-outline" type="submit">
+                                <button class="btn btn-success btn-outline btn-sm" type="submit">
                                     <i class="fa fa-save"></i>
                                     Simpan
                                 </button>
@@ -65,8 +64,6 @@
                 extraPlugins: 'image2,justify',
                 filebrowserImageUploadUrl: '{{URL::to('admin/upload-gambar')}}',
              });
-
-            
         })
 </script>
 @endsection
