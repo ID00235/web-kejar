@@ -110,6 +110,16 @@ Route::group(['middleware' => 'auth','middleware' => 'role:admin||operator'], fu
 			Route::post('/delete',"Backend\SaranaController@delete"); 
 		});
 
+		Route::group(['prefix'=>'peraturan','middleware' => 'role:admin'], function(){
+			Route::get('/',"Backend\PeraturanController@index");
+			Route::get('/baru',"Backend\PeraturanController@baru");
+			Route::get('/detail/{cid}',"Backend\PeraturanController@detail");
+			Route::get('/edit/{cid}',"Backend\PeraturanController@edit");
+			Route::post('/store',"Backend\PeraturanController@store");
+			Route::post('/update/{cid}',"Backend\PeraturanController@update");
+			Route::post('/delete',"Backend\PeraturanController@delete"); 
+		});
+
 		
 
 		//PENGATURAN AKUN USER

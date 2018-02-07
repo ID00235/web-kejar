@@ -57,7 +57,7 @@ class BeritaController extends Controller
         $extension = $file->getClientOriginalExtension();
         $filename = "berita/$filetime".".".$extension;
         $thumbs = "berita/thumb.".$filetime.".".$extension;
-        Image::make($request->file('gambar'))->resize(600,null, function ($constraint) {
+        Image::make($request->file('gambar'))->resize(1200,null, function ($constraint) {
             $constraint->aspectRatio();
         })->save($filename);
         Image::make($request->file('gambar'))

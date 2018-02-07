@@ -70,10 +70,19 @@ $setting = DB::table('setting')->first();
                 </ul>
               </li>
 
-
+              <li @if($route=="peraturan") class="active" @endif>
+                <a href="{{url('peraturan')}}">Peraturan</a>
+              </li>
               <li @if($route=="gallery") class="active" @endif>
                 <a href="{{url::to("gallery-photo")}}">Gallery</a>
               </li>
+
+
+              <li @if($route=="konsultasi") class="active" @endif>
+                <a href="{{url('konsultasi')}}">Layanan Hukum</a>
+              </li>
+
+
             </ul>
             <!-- End Navigation List -->
           </div>

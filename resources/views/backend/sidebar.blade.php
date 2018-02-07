@@ -21,7 +21,10 @@
         </li>
         <li @if($route=="header") class="current" @endif>
             <a href="{{URL::to('/admin/header')}}"><i class="fa fa-ellipsis-h"></i> Header Website</a>
-        </li>       
+        </li> 
+        <li @if($route=="peraturan") class="current" @endif>
+            <a href="{{URL::to('/admin/peraturan')}}"><i class="fa fa-book"></i> Peraturan</a>
+        </li>      
         <li @if($route=="setting")class="current" @endif>
             <a href="{{URL::to('/admin/setting')}}">
             <i class="fa fa-info-circle" aria-hidden="true"></i>Informasi Kontak</a>
