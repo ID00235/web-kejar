@@ -9,6 +9,7 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesResources;
 use App\Models\Profil;
 use App\Models\Organisasi;
+use App\Models\Sarana;
 use SEOMeta;
 use OpenGraph;
 use Twitter;
@@ -21,8 +22,9 @@ class Controller extends BaseController
     public function getlistmenu(){
     	$profil = Profil::select('id','nama')->get();
         $organisasi = Organisasi::select('id','nama')->get();
+        $sarana = Sarana::select('id','nama')->get();
         
-    	return array("profil"=>$profil,"organisasi"=>$organisasi);
+    	return array("profil"=>$profil,"organisasi"=>$organisasi, "sarana"=>$sarana);
     }
 
    
