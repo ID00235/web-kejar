@@ -86,8 +86,7 @@ $setting = DB::table('setting')->first();
             <li @if($route=="beranda") class="active" @endif><a href="{{URL::to("/")}}">Home</a></li>
             <li @if($route=="berita") class="active" @endif><a href="{{URL::to("semua-berita")}}">Berita</a></li>
             <li @if($route=="profil") class="active" @endif>
-            <li @if($route=="organisasi") class="active" @endif>
-              <a href="#">Profil Kecamatan</a>
+              <a href="#">Profil Kejaksaan Negeri</a>
               <ul class="dropdown">
                 <?php
                   $profil = $menu["profil"];
@@ -98,7 +97,33 @@ $setting = DB::table('setting')->first();
                 @endforeach
               </ul>
             </li>
-            
+            <li @if($route=="organisasi") class="active" @endif>
+              <a href="#">Organisasi</a>
+              <ul class="dropdown">
+                <?php
+                  $organisasi = $menu["organisasi"];
+                ?>
+                @foreach($organisasi as $p)
+                <li><a href="{{URL::to("organisasi"."/".$p->id."/".generate_url($p->nama))}}">{{$p->nama}}</a>
+                </li>
+                @endforeach
+              </ul>
+            </li>
+            <li @if($route=="organisasi") class="active" @endif>
+              <a href="#">Sarana Prasarana</a>
+              <ul class="dropdown">
+                <?php
+                  $sarana = $menu["sarana"];
+                ?>
+                @foreach($sarana as $p)
+                <li><a href="{{URL::to("sarana"."/".$p->id."/".generate_url($p->nama))}}">{{$p->nama}}</a>
+                </li>
+                @endforeach
+              </ul>
+            </li>
+            <li @if($route=="peraturan") class="active" @endif>
+                <a href="{{url::to("peraturan")}}">Peraturan</a>
+            </li>
             <li @if($route=="gallery") class="active" @endif>
                 <a href="{{url::to("gallery")}}">Gallery</a>
             </li>

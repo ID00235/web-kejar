@@ -1,26 +1,17 @@
 <hr class="hidden-lg">
 <p class="hidden-xs">&nbsp;</p>
 <div class="sidemenu">
-    <p class="sidetitle">
-      <center><img src="{{asset('images/menu3.png')}}" class="hidden-xs"></center>
-    </p>
-    <h4 class="classic-title hidden-lg hidden-md"><span>Kepala Kejaksaan Negeri</span></h4>
+    <h4 class="classic-title"><span>Kepala Kejaksaan Negeri</span></h4>
    
 </div>
 <hr class="hidden-lg">
 <div class="sidemenu">
-    <p class="sidetitle">
-      <center><img src="{{asset('images/menu3.png')}}" class="hidden-xs"></center>
-    </p>
-    <h4 class="classic-title hidden-lg hidden-md"><span>Pejabat Struktural</span></h4>
+    <h4 class="classic-title"><span>Pejabat Struktural</span></h4>
    
 </div>
 <hr class="hidden-lg">
 <div class="sidemenu">
-    <p class="sidetitle">
-      <center><img src="{{asset('images/menu4.png')}}"  class="hidden-xs"></center>
-    </p>
-    <h4 class="classic-title hidden-lg hidden-md"><span>Profil</span></h4>
+    <h4 class="classic-title"><span>Profil</span></h4>
     <?php
     $profil = DB::table('profil')->select('id','nama')->get();
     ?>
@@ -35,10 +26,7 @@
 </div>
 <hr class="hidden-lg">
 <div class="sidemenu">
-    <p class="sidetitle">
-      <center><img src="{{asset('images/link-menu.png')}}"  class="hidden-xs"></center>
-    </p>
-    <h4 class="classic-title hidden-lg hidden-md"><span>Website Terkait</span></h4>
+    <h4 class="classic-title"><span>Website Terkait</span></h4>
     <ul class="listlink">
       <li>
             <a href="http://www.batangharikab.go.id" target="_blank">www.batangharikab.go.id</a><br>
