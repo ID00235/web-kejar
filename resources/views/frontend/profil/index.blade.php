@@ -1,5 +1,5 @@
 @extends('frontend.layout')
-@section("pagetitle","Profil KEJARI")
+@section("pagetitle","Profil Kejaksaan Negeri")
 @section("subpage","Profil Kejaksaan Negeri Batanghari")
 @section("pageslider")
 @include("frontend.pagetop")

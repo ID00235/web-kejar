@@ -1,6 +1,6 @@
 @extends('frontend.layout')
 @section("pagetitle","Gallery Photo")
-@section("subpage","Kecamatan Batin XXIV")
+@section("subpage","Kejaksaan Negeri Batanghari")
 @section("pageslider")
 	@include("frontend.pagetop")
 @endsection
