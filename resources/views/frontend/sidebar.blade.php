@@ -8,13 +8,19 @@
    
 </div>
 <hr class="hidden-lg">
-<center><img class="img img-responsive" width="100%" src="{{asset('pop-up/1.jpg')}}"></center>
-<hr>
+<div class="sidemenu">
+    <p class="sidetitle">
+      <center><img src="{{asset('images/menu3.png')}}" class="hidden-xs"></center>
+    </p>
+    <h4 class="classic-title hidden-lg hidden-md"><span>Pejabat Struktural</span></h4>
+   
+</div>
+<hr class="hidden-lg">
 <div class="sidemenu">
     <p class="sidetitle">
       <center><img src="{{asset('images/menu4.png')}}"  class="hidden-xs"></center>
     </p>
-    <h4 class="classic-title hidden-lg hidden-md"><span>Informasi</span></h4>
+    <h4 class="classic-title hidden-lg hidden-md"><span>Profil</span></h4>
     <?php
     $profil = DB::table('profil')->select('id','nama')->get();
     ?>
