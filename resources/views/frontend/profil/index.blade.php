@@ -1,6 +1,6 @@
 @extends('frontend.layout')
-@section("pagetitle","Profil Kecamatan")
-@section("subpage","Profil Kecamatan Batin XXIV")
+@section("pagetitle","Profil KEJARI")
+@section("subpage","Profil Kejaksaan Negeri Batanghari")
 @section("pageslider")
 @include("frontend.pagetop")
 @endsection
@@ -23,37 +23,8 @@
                   </div>
             </div>   
         </div>       
-        <div class="col-md-4">
-            <div class="sidemenu">
-                    <h4 class="classic-title"><span>Profil Kecamatan</span></h4>
-                    <?php
-                      $profil = DB::table('profil')->select('id','nama')->get();
-                    ?>
-                    <ul class="listmenu">
-                    @foreach($profil as $p)
-                      <?php
-                              $url = URL::to("profil/".$p->id."/".generate_url($p->nama));
-                          ?>
-                      <li><a href="{{$url}}">{{$p->nama}}</a></li>
-                    @endforeach
-                    </ul>
-            </div>
-
-            <div class="sidemenu">
-                    <h4 class="classic-title"><span>Informasi</span></h4>
-                    <?php
-                    $informasi = DB::table('informasi')->select('id','nama')->get();
-                    ?>
-                    <ul class="listmenu">
-                    @foreach($informasi as $p)
-                      <?php
-                              $url = URL::to("informasi/".$p->id."/".generate_url($p->nama));
-                          ?>
-                      <li><a href="{{$url}}">{{$p->nama}}</a></li>
-                    @endforeach
-                    </ul>
-            </div>
-
+         <div class="col-sm-4 col-xs-12" style="background:#f2f3f4; padding-left: 20px !important; padding-right: 20 !important;">
+          @include('frontend.sidebar')
         </div>
 
  		</div>

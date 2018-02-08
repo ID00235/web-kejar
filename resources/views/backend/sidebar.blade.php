@@ -13,6 +13,9 @@
         <li @if($route=="organisasi") class="current" @endif>
             <a href="{{URL::to('/admin/organisasi')}}"><i class="fa fa-building-o"></i> Organisasi Kejaksaan</a>
         </li>
+        <li @if($route=="pejabat-struktural") class="current" @endif>
+            <a href="{{URL::to('/admin/pejabat-struktural')}}"><i class="fa fa-users"></i> Pejabat Struktural</a>
+        </li> 
         <li @if($route=="sarana") class="current" @endif>
             <a href="{{URL::to('/admin/sarana')}}"><i class="fa fa-building-o"></i> Sarana Kejaksaan</a>
         </li>
@@ -24,7 +27,7 @@
         </li> 
         <li @if($route=="peraturan") class="current" @endif>
             <a href="{{URL::to('/admin/peraturan')}}"><i class="fa fa-book"></i> Peraturan</a>
-        </li>      
+        </li>       
         <li @if($route=="setting")class="current" @endif>
             <a href="{{URL::to('/admin/setting')}}">
             <i class="fa fa-info-circle" aria-hidden="true"></i>Informasi Kontak</a>

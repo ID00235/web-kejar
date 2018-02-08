@@ -47,21 +47,8 @@
                   </div>
             </div>   
         </div>       
-        <div class="col-md-4">
-            <div class="sidemenu">
-                    <h4 class="classic-title"><span>Peraturan Perundang-undangan</span></h4>
-                    <?php
-                      $organisasi = DB::table('peraturan')->select('id','nama')->get();
-                    ?>
-                    <ul class="listmenu">
-                    @foreach($peraturan as $p)
-                      <?php
-                              $url = URL::to("peraturan/".$p->id."/".generate_url($p->nama));
-                          ?>
-                      <li><a href="{{$url}}">{{$p->nama}}</a></li>
-                    @endforeach
-                    </ul>
-            </div>
+        <div class="col-sm-4 col-xs-12" style="background:#f2f3f4; padding-left: 20px !important; padding-right: 20 !important;">
+          @include('frontend.sidebar')
         </div>
 
  		</div>

@@ -26,7 +26,6 @@ Route::group(['middleware' => 'auth','middleware' => 'role:admin||operator'], fu
             Route::get('/',"Backend\GalleryController@index");
             Route::get('/list-photo',"Backend\GalleryController@listphoto");
             Route::get('/detailphoto/{id}',"Backend\GalleryController@detailphoto");
-
             
             Route::post('/storephoto',"Backend\GalleryController@storephoto");
             Route::post('/updatephoto',"Backend\GalleryController@updatePhoto");
@@ -39,7 +38,15 @@ Route::group(['middleware' => 'auth','middleware' => 'role:admin||operator'], fu
             
         });
 
-		
+        Route::group(['prefix' => 'pejabat-struktural'], function () {
+            Route::get('/',"Backend\PejabatController@index");
+            Route::get('/list',"Backend\PejabatController@list");
+            Route::get('/detail/{id}',"Backend\PejabatController@detail");
+
+            Route::post('/store',"Backend\PejabatController@store");
+            Route::post('/delete',"Backend\PejabatController@delete");
+         });
+        	
 
 		//ROUTER HEADER
 		Route::group(['prefix' => 'header' , 'middleware' => 'role:admin'], function () {
@@ -87,6 +94,8 @@ Route::group(['middleware' => 'auth','middleware' => 'role:admin||operator'], fu
 			Route::post('/delete',"Backend\OrganisasiController@delete");
 		});
 
+		//ROUTE PEJABAT STRUKTURAL
+		
 
 		//ROUTER Pengguna  
 		Route::group(['prefix' => 'pengguna','middleware' => 'role:admin'], function () {

@@ -75,8 +75,7 @@ $header_default = $header[0];
 <!-- Jssor Slider End -->
 </section>
 
-<script type="text/javascript" 
-src="{{asset('js/jssor.slider.min.js')}}"></script>
+<script type="text/javascript" src="{{asset('js/jssor.slider.min.js')}}"></script>
 
 <script>
 

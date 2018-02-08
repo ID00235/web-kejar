@@ -34,69 +34,8 @@
             </div>       
             <p></p>
         </div>
-        <div class="col-md-4">
-            <div class="sidemenu">
-              <h4 class="classic-title"><span>Berita Lainnya</span></h4>
-              <ul class="listnews">
-                 <?php
-                 $id = $berita->id;
-                 $upnews = DB::table('berita')->select('judul','id','tanggal')
-                          ->where('id','>', $id)->orderby('id','desc')->limit(4)->get();
-                 $downnews = DB::table('berita')->select('judul','id','tanggal')
-                          ->where('id','<', $id)->orderby('id','desc')->limit(4)->get();
-                 ?>
-                @foreach($upnews as $bt)
-                      <?php
-                           $url = URL::to("baca/".$bt->id."/".generate_url($bt->judul)."/".$bt->tanggal);
-                      ?>
-                  <li>
-                    <a href="{{$url}}">{{$bt->judul}}</a><br>
-                    <small>{{tanggal_Singkat_indo($bt->tanggal)}}</small>
-                  </li>
-                @endforeach
-
-                @foreach($downnews as $bt)
-                      <?php
-                           $url = URL::to("baca/".$bt->id."/".generate_url($bt->judul)."/".$bt->tanggal);
-                      ?>
-                  <li>
-                    <a href="{{$url}}">{{$bt->judul}}</a><br>
-                    <small>{{tanggal_Singkat_indo($bt->tanggal)}}</small>
-                  </li>
-                @endforeach
-                </ul>
-            </div>
-
-            <div class="sidemenu">
-                    <h4 class="classic-title"><span>Informasi</span></h4>
-                    <?php
-                    $informasi = DB::table('informasi')->select('id','nama')->get();
-                    ?>
-                    <ul class="listmenu">
-                    @foreach($informasi as $p)
-                      <?php
-                              $url = URL::to("informasi/".$p->id."/".generate_url($p->nama));
-                          ?>
-                      <li><a href="{{$url}}">{{$p->nama}}</a></li>
-                    @endforeach
-                    </ul>
-            </div>
-
-            <div class="sidemenu">
-                    <h4 class="classic-title"><span>Profil Kecamatan</span></h4>
-                    <?php
-                      $profil = DB::table('profil')->select('id','nama')->get();
-                    ?>
-                    <ul class="listmenu">
-                    @foreach($profil as $p)
-                      <?php
-                              $url = URL::to("profil/".$p->id."/".generate_url($p->nama));
-                          ?>
-                      <li><a href="{{$url}}">{{$p->nama}}</a></li>
-                    @endforeach
-                    </ul>
-            </div>
-
+        <div class="col-sm-4 col-xs-12" style="background:#f2f3f4; padding-left: 20px !important; padding-right: 20 !important;">
+          @include('frontend.sidebar')
         </div>
 
  		</div>

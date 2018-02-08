@@ -23,37 +23,8 @@
                   </div>
             </div>  
         </div>       
-        <div class="col-md-4">
-            <div class="sidemenu">
-                    <h4 class="classic-title"><span>Sarana Kejaksaan</span></h4>
-                    <?php
-                      $sarana = DB::table('sarana')->select('id','nama')->get();
-                    ?>
-                    <ul class="listmenu">
-                    @foreach($sarana as $s)
-                      <?php
-                              $url = URL::to("sarana/".$s->id."/".generate_url($s->nama));
-                          ?>
-                      <li><a href="{{$url}}">{{$s->nama}}</a></li>
-                    @endforeach
-                    </ul>
-            </div>
-
-            <div class="sidemenu">
-                    <h4 class="classic-title"><span>Informasi</span></h4>
-                    <?php
-                    $informasi = DB::table('informasi')->select('id','nama')->get();
-                    ?>
-                    <ul class="listmenu">
-                    @foreach($informasi as $p)
-                      <?php
-                              $url = URL::to("informasi/".$p->id."/".generate_url($p->nama));
-                          ?>
-                      <li><a href="{{$url}}">{{$p->nama}}</a></li>
-                    @endforeach
-                    </ul>
-            </div>
-
+       <div class="col-sm-4 col-xs-12" style="background:#f2f3f4; padding-left: 20px !important; padding-right: 20 !important;">
+          @include('frontend.sidebar')
         </div>
 
  		</div>

@@ -36,37 +36,8 @@
                 <p class="hidden-md hidden-lg">&nbsp;</p>
             </div>
         </div>
-        <div class="col-md-4">
-            <div class="sidemenu">
-                    <h4 class="classic-title"><span>Data Umum</span></h4>
-                    <?php
-                    $dataumum = DB::table('dataangka')->select('id','nama')->get();
-                    ?>
-                    <ul class="listmenu">
-                    @foreach($dataumum as $p)
-                      <?php
-                              $url = URL::to("informasi/".$p->id."/".generate_url($p->nama));
-                          ?>
-                      <li><a href="{{$url}}">{{$p->nama}}</a></li>
-                    @endforeach
-                    </ul>
-            </div>
-
-
-            <div class="sidemenu">
-                    <h4 class="classic-title"><span>Informasi</span></h4>
-                    <?php
-                    $informasi = DB::table('informasi')->select('id','nama')->get();
-                    ?>
-                    <ul class="listmenu">
-                    @foreach($informasi as $p)
-                      <?php
-                              $url = URL::to("informasi/".$p->id."/".generate_url($p->nama));
-                          ?>
-                      <li><a href="{{$url}}">{{$p->nama}}</a></li>
-                    @endforeach
-                    </ul>
-            </div>
+        <div class="col-sm-4 col-xs-12" style="background:#f2f3f4; padding-left: 20px !important; padding-right: 20 !important;">
+          @include('frontend.sidebar')
         </div>
 
  		</div>
