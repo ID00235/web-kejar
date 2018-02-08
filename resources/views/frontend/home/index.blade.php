@@ -13,7 +13,7 @@
       <!-- Start News & Skill Section -->
       <div class="container">
           <div class="row">
-              <div class="col-lg-8 col-xs-12">
+              <div class="col-sm-8 col-xs-12" style="padding-right: 15px !important;">
                 <h4 class="classic-title"><span>Berita Terkini</span>
                 <small class="pull-right"><a href="{{url('semua-berita')}}">Semua Berita</a></small>
                 </h4>
@@ -94,8 +94,7 @@
                     @endforeach
                   <hr class="hidden-lg">
               </div>
-              <div class="col-lg-4 col-xs-12">
-                <img class="img img-responsive" src="{{asset('images/welcome.png')}}">
+              <div class="col-sm-4 col-xs-12" style="background:#f2f3f4; padding-left: 20px !important; padding-right: 20 !important;">
                 <hr class="hidden-lg">
                 <p class="hidden-xs">&nbsp;</p>
                 <div class="sidemenu">
@@ -115,6 +114,9 @@
                     @endforeach
                     </ul>
                 </div>
+                <hr class="hidden-lg">
+                <center><img class="img img-responsive" width="90%" src="{{asset('pop-up/1.jpg')}}"></center>
+                <hr class="hidden-xs">
                 <div class="sidemenu">
                     <p class="sidetitle">
                       <center><img src="{{asset('images/menu4.png')}}"  class="hidden-xs"></center>
@@ -132,6 +134,7 @@
                     @endforeach
                     </ul>
                 </div>
+                <hr class="hidden-lg">
                 <div class="sidemenu">
                     <p class="sidetitle">
                       <center><img src="{{asset('images/link-menu.png')}}"  class="hidden-xs"></center>

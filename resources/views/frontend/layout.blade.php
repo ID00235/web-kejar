@@ -4,7 +4,7 @@
 <html lang="en">
 <head>
   <!-- Basic -->
-  <title>@yield("pagetitle") | Kecamatan Batin XXIV</title>
+  <title>@yield("pagetitle") | KEJARI BATANGHARI</title>
   <!-- Define Charset -->
   <meta charset="utf-8">
   <!-- Responsive Metatag -->
