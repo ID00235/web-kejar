@@ -1,6 +1,6 @@
 @extends('frontend.layout')
-@section("pagetitle","Profil Kecamatan")
-@section("subpage","Profil Kecamatan Batin XXIV")
+@section("pagetitle","Profil Kejaksaan Negeri")
+@section("subpage","Profil Kejaksaan Negeri Batanghari")
 @section("pageslider")
 @include("frontend.pagetop")
 @endsection
