@@ -65,7 +65,7 @@
                     @endforeach
                   <hr class="hidden-lg">
               </div>
-              <div class="col-sm-4 col-xs-12" style="background:#f2f3f4; padding-left: 20px !important; padding-right: 20 !important;">
+              <div class="col-sm-4 col-xs-12" style="  padding-left: 20px !important; padding-right: 20 !important;">
                 @include('frontend.sidebar')
               </div>
           </div>
