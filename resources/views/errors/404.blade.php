@@ -3,7 +3,7 @@ $route  = "";
 ?>
 @extends('frontend.layout-error')
 @section("pagetitle","Error 404 Page Not Found")
-@section("subpage","Kecamatan Batin XXIV")
+@section("subpage","Kejaksaan Negeri Batanghari")
 @section("pageslider")
     @include("frontend.pagetop")
 @endsection
