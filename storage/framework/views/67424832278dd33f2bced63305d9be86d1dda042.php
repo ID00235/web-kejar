@@ -45,7 +45,36 @@ $setting = DB::table('setting')->first();
                   <?php endforeach; ?>
                 </ul>
               </li>
-              
+
+               <li <?php if($route=="organisasi"): ?> class="active" <?php endif; ?>>
+                <a href="#">Organisasi</a>
+                <ul class="dropdown">
+                  <?php
+                    $organisasi = $menu["organisasi"];
+                  ?>
+                  <?php foreach($organisasi as $p): ?>
+                  <li><a href="<?php echo e(URL::to("organisasi"."/".$p->id."/".generate_url($p->nama))); ?>"><?php echo e($p->nama); ?></a>
+                  </li>
+                  <?php endforeach; ?>
+                </ul>
+              </li>
+
+              <li <?php if($route=="sarana"): ?> class="active" <?php endif; ?>>
+                <a href="#">Sarana</a>
+                <ul class="dropdown">
+                  <?php
+                    $sarana = $menu["sarana"];
+                  ?>
+                  <?php foreach($sarana as $p): ?>
+                  <li><a href="<?php echo e(URL::to("sarana"."/".$p->id."/".generate_url($p->nama))); ?>"><?php echo e($p->nama); ?></a>
+                  </li>
+                  <?php endforeach; ?>
+                </ul>
+              </li>
+
+              <li <?php if($route=="peraturan"): ?> class="active" <?php endif; ?>>
+                <a href="<?php echo e(url('peraturan')); ?>">Peraturan</a>
+              </li>
               <li <?php if($route=="gallery"): ?> class="active" <?php endif; ?>>
                 <a href="<?php echo e(url::to("gallery-photo")); ?>">Gallery</a>
               </li>
@@ -59,7 +88,7 @@ $setting = DB::table('setting')->first();
             <li <?php if($route=="beranda"): ?> class="active" <?php endif; ?>><a href="<?php echo e(URL::to("/")); ?>">Home</a></li>
             <li <?php if($route=="berita"): ?> class="active" <?php endif; ?>><a href="<?php echo e(URL::to("semua-berita")); ?>">Berita</a></li>
             <li <?php if($route=="profil"): ?> class="active" <?php endif; ?>>
-              <a href="#">Profil Kecamatan</a>
+              <a href="#">Profil Kejaksaan Negeri</a>
               <ul class="dropdown">
                 <?php
                   $profil = $menu["profil"];
@@ -70,44 +99,33 @@ $setting = DB::table('setting')->first();
                 <?php endforeach; ?>
               </ul>
             </li>
-            <li <?php if($route=="kelurahan"): ?> class="active" <?php endif; ?>>
-                <a href="#">Kelurahan dan Desa</a>
-                <ul class="dropdown">
-                  <?php
-                    $kelurahan = $menu["kelurahan"];
-                  ?>
-                  <?php foreach($kelurahan as $p): ?>
-                  <li><a href="<?php echo e(URL::to("kelurahan"."/".$p->id."/".generate_url($p->nama))); ?>"><?php echo e($p->nama); ?></a>
-                  </li>
-                  <?php endforeach; ?>
-                </ul>
-              </li>
-              <li <?php if($route=="dataumum"): ?> class="active" <?php endif; ?>>
-                  <a href="#">Data Umum</a>
-                  <?php
-                    $dataumum = $menu["dataumum"];
-                  ?>
-                  <ul class="dropdown">        
-                    <?php foreach($dataumum as $p): ?>
-                      <li>
-                        <a href="<?php echo e(URL::to("dataumum/".$p->id."/".generate_url($p->nama))); ?>"><?php echo e($p->nama); ?></a>
-                     </li>
-                    <?php endforeach; ?>        
-                  </ul>
-              </li>
-              <li <?php if($route=="informasi"): ?> class="active" <?php endif; ?>>
-                  <a href="#">Informasi</a>
-                  <?php
-                    $informasi = $menu["informasi"];
-                  ?>
-                  <ul class="dropdown">        
-                    <?php foreach($informasi as $p): ?>
-                      <li>
-                        <a href="<?php echo e(URL::to("informasi/".$p->id."/".generate_url($p->nama))); ?>"><?php echo e($p->nama); ?></a>
-                     </li>
-                    <?php endforeach; ?>        
-                  </ul>
-              </li>
+            <li <?php if($route=="organisasi"): ?> class="active" <?php endif; ?>>
+              <a href="#">Organisasi</a>
+              <ul class="dropdown">
+                <?php
+                  $organisasi = $menu["organisasi"];
+                ?>
+                <?php foreach($organisasi as $p): ?>
+                <li><a href="<?php echo e(URL::to("organisasi"."/".$p->id."/".generate_url($p->nama))); ?>"><?php echo e($p->nama); ?></a>
+                </li>
+                <?php endforeach; ?>
+              </ul>
+            </li>
+            <li <?php if($route=="organisasi"): ?> class="active" <?php endif; ?>>
+              <a href="#">Sarana Prasarana</a>
+              <ul class="dropdown">
+                <?php
+                  $sarana = $menu["sarana"];
+                ?>
+                <?php foreach($sarana as $p): ?>
+                <li><a href="<?php echo e(URL::to("sarana"."/".$p->id."/".generate_url($p->nama))); ?>"><?php echo e($p->nama); ?></a>
+                </li>
+                <?php endforeach; ?>
+              </ul>
+            </li>
+            <li <?php if($route=="peraturan"): ?> class="active" <?php endif; ?>>
+                <a href="<?php echo e(url::to("peraturan")); ?>">Peraturan</a>
+            </li>
             <li <?php if($route=="gallery"): ?> class="active" <?php endif; ?>>
                 <a href="<?php echo e(url::to("gallery")); ?>">Gallery</a>
             </li>

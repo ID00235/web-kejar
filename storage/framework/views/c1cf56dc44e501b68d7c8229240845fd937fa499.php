@@ -3,7 +3,7 @@ $route  = "";
 ?>
 
 <?php $__env->startSection("pagetitle","Error 404 Page Not Found"); ?>
-<?php $__env->startSection("subpage","Kecamatan Batin XXIV"); ?>
+<?php $__env->startSection("subpage","Kejaksaan Negeri Batanghari"); ?>
 <?php $__env->startSection("pageslider"); ?>
     <?php echo $__env->make("frontend.pagetop", array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
 <?php $__env->stopSection(); ?>

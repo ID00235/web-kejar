@@ -4,7 +4,7 @@
 <html lang="en">
 <head>
   <!-- Basic -->
-  <title><?php echo $__env->yieldContent("pagetitle"); ?> | Kecamatan Batin XXIV</title>
+  <title><?php echo $__env->yieldContent("pagetitle"); ?> | Kejaksaan Negeri Batanghari</title>
   <!-- Define Charset -->
   <meta charset="utf-8">
   <!-- Responsive Metatag -->
@@ -12,7 +12,7 @@
   <link rel="shortcut icon" href="<?php echo e(asset('images/favicon.ico')); ?>">
   <!-- Page Description and Author -->
   <meta name="description" content="<?php $__env->startSection("pagetitle"); ?><?php echo $__env->yieldSection(); ?>">
-  <meta name="author" content="Kecamatan Batin XXIV">
+  <meta name="author" content="Kejaksaan Negeri Batanghari">
   <?php echo SEOMeta::generate(); ?>
 
   <?php echo OpenGraph::generate(); ?>
@@ -95,7 +95,7 @@
             <div class="col-md-12">
               <center><strong><h4 style="color:white !important;">
               Pemerintah Daerah Kabupaten Batang Hari<br>
-              &copy; 2017 Kecamatan Batin XXIV</h4> </strong>
+              &copy; 2018 Kejaksaan Negeri Batanghari</h4> </strong>
               <small style="color:white;">
                 <?php
                 $setting = DB::table('setting')->first();

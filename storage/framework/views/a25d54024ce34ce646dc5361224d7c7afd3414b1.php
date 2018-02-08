@@ -12,7 +12,7 @@
       <!-- Start News & Skill Section -->
       <div class="container">
           <div class="row">
-              <div class="col-lg-8 col-xs-12">
+              <div class="col-sm-8 col-xs-12" style="padding-right: 15px !important;">
                 <h4 class="classic-title"><span>Berita Terkini</span>
                 <small class="pull-right"><a href="<?php echo e(url('semua-berita')); ?>">Semua Berita</a></small>
                 </h4>
@@ -35,37 +35,6 @@
                       <?php endforeach; ?>
                 </div>
                  <p class="hidden-xs">&nbsp;</p>
-                 <div class="latest-posts-classic">
-                    <h4 class="classic-title"><span>Agenda Kegiatan</span>
-                    <small class="pull-right"><a href="<?php echo e(url('semua-agenda')); ?>">Semua Agenda</a></small>
-                    </h4>
-                    <?php
-                      $agenda = DB::table('agenda')->orderby('tanggal_mulai','desc')->limit(5)->get();
-                    ?>
-                    <?php foreach($agenda as $pt): ?>
-                    <?php
-                      $exp = explode(" ", tanggal_singkat_indo($pt->tanggal_mulai));
-                    ?>
-                    <div class="post-row item">
-                      <div class="left-meta-post">
-                        <div class="post-date">
-                            <span class="day"><?php echo e($exp[0]); ?></span><span class="month"><?php echo e($exp[1]); ?></span>
-                        </div>
-                      </div>
-                      <b><?php echo e($pt->nama); ?></b><br>
-                      <small>
-                          <?php echo e($pt->lokasi); ?>, 
-                          <?php if($pt->tanggal_selesai!='0000-00-00'): ?> 
-                              <?php echo e(tanggal_singkat_indo($pt->tanggal_mulai)); ?> - <?php echo e(tanggal_singkat_indo($pt->tanggal_selesai)); ?>
-
-                          <?php else: ?> 
-                              <?php echo e(tanggal_singkat_indo($pt->tanggal_mulai)); ?>
-
-                          <?php endif; ?>
-                      </small>
-                    </div>
-                     <?php endforeach; ?>
-                  </div>
                 <p class="hidden-md hidden-lg">&nbsp;</p>
                 <p class="hidden-xs">&nbsp;</p>
                 <h4 class="classic-title"><span>Gallery Photo Kegiatan</span>
@@ -95,73 +64,8 @@
                     <?php endforeach; ?>
                   <hr class="hidden-lg">
               </div>
-              <div class="col-lg-4 col-xs-12">
-                <img class="img img-responsive" src="<?php echo e(asset('images/welcome.png')); ?>">
-                <hr class="hidden-lg">
-                <p class="hidden-xs">&nbsp;</p>
-                <div class="sidemenu">
-                    <p class="sidetitle">
-                      <center><img src="<?php echo e(asset('images/menu3.png')); ?>"  class="hidden-xs"></center>
-                    </p>
-                    <h4 class="classic-title hidden-lg hidden-md"><span>Data Umum</span></h4>
-                    <?php
-                    $dataumum = DB::table('dataangka')->select('id','nama')->get();
-                    ?>
-                    <ul class="listmenu">
-                    <?php foreach($dataumum as $p): ?>
-                      <?php
-                              $url = URL::to("dataumum/".$p->id."/".generate_url($p->nama));
-                          ?>
-                      <li><a href="<?php echo e($url); ?>"><?php echo e($p->nama); ?></a></li>
-                    <?php endforeach; ?>
-                    </ul>
-                </div>
-                <div class="sidemenu">
-                    <p class="sidetitle">
-                      <center><img src="<?php echo e(asset('images/menu4.png')); ?>"  class="hidden-xs"></center>
-                    </p>
-                    <h4 class="classic-title hidden-lg hidden-md"><span>Informasi</span></h4>
-                    <?php
-                    $informasi = DB::table('informasi')->select('id','nama')->get();
-                    ?>
-                    <ul class="listmenu">
-                    <?php foreach($informasi as $p): ?>
-                      <?php
-                              $url = URL::to("informasi/".$p->id."/".generate_url($p->nama));
-                          ?>
-                      <li><a href="<?php echo e($url); ?>"><?php echo e($p->nama); ?></a></li>
-                    <?php endforeach; ?>
-                    </ul>
-                </div>
-                <div class="sidemenu">
-                    <p class="sidetitle">
-                      <center><img src="<?php echo e(asset('images/link-menu.png')); ?>"  class="hidden-xs"></center>
-                    </p>
-                    <h4 class="classic-title hidden-lg hidden-md"><span>Website Terkait</span></h4>
-                    <ul class="listlink">
-                      <li>
-                            <a href="http://www.batangharikab.go.id" target="_blank">www.batangharikab.go.id</a><br>
-                            <small>Website Pemerintah Kab. Batang Hari</small>
-                      </li>
-                      <li>
-                            <a href="http://dprd.batangharikab.go.id" target="_blank">dprd.batangharikab.go.id</a><br>
-                            <small>Website DPRD Kab. Batang Hari</small>
-                      </li>
-                      <li>
-                            <a href="http://ppid.batangharikab.go.id" target="_blank">ppid.batangharikab.go.id</a><br>
-                            <small>PPID Kab. Batang Hari</small>
-                      </li>
-                      <li>
-                            <a href="http://lpse.batangharikab.go.id" target="_blank">lpse.batangharikab.go.id</a><br>
-                            <small>LPSE Kab. Batang Hari</small>
-                      </li>
-                      <li>
-                            <a href="http://dukcapil.batangharikab.go.id" target="_blank">dukcapil.batangharikab.go.id</a><br>
-                            <small>DUKCAPIL Kab. Batang Hari</small>
-                      </li>
-                    </ul>
-                </div>
-                <p class="hidden-xs">&nbsp;</p>
+              <div class="col-sm-4 col-xs-12" style="  padding-left: 20px !important; padding-right: 20 !important;">
+                <?php echo $__env->make('frontend.sidebar', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
               </div>
           </div>
         <div class="hr1 margin-60"></div>

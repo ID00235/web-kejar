@@ -4,7 +4,7 @@
 <html lang="en">
 <head>
   <!-- Basic -->
-  <title><?php echo $__env->yieldContent("pagetitle"); ?> | Kecamatan Batin XXIV</title>
+  <title><?php echo $__env->yieldContent("pagetitle"); ?> | KEJARI BATANGHARI</title>
   <!-- Define Charset -->
   <meta charset="utf-8">
   <!-- Responsive Metatag -->
