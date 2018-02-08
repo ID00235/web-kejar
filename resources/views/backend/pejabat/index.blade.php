@@ -174,6 +174,7 @@
                     <div class="form-group">
                         <div class="col-md-12">
                             <legend>Form Upload Photo Baru (<small>Ukuran FIle Max 1MB</small>)</legend>
+                            <p>Agar tampilan maksimal gunakan resolusi gambar gunakan ukuran 480x480</p>
                         </div>
                     </div>
                     <div class="form-group">

@@ -29,16 +29,16 @@
     <h4 class="classic-title"><span>Website Terkait</span></h4>
     <ul class="listlink">
       <li>
+            <a href="http://http://www.kejati-jambi.go.id/" target="_blank">kejaksaan.go.id</a><br>
+            <small>Website Kejaksaan Agung</small>
+      </li>
+      <li>
+            <a href="http://http://www.kejati-jambi.go.id/" target="_blank">www.kejati-jambi.go.id</a><br>
+            <small>Website Kejaksaan Tinggi Jambi</small>
+      </li>
+      <li>
             <a href="http://www.batangharikab.go.id" target="_blank">www.batangharikab.go.id</a><br>
             <small>Website Pemerintah Kab. Batang Hari</small>
-      </li>
-      <li>
-            <a href="http://dprd.batangharikab.go.id" target="_blank">dprd.batangharikab.go.id</a><br>
-            <small>Website DPRD Kab. Batang Hari</small>
-      </li>
-      <li>
-            <a href="http://ppid.batangharikab.go.id" target="_blank">ppid.batangharikab.go.id</a><br>
-            <small>PPID Kab. Batang Hari</small>
       </li>
     </ul>
 </div>
