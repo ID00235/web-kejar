@@ -49,14 +49,14 @@
         </div>       
         <div class="col-md-4">
             <div class="sidemenu">
-                    <h4 class="classic-title"><span>Organisasi Pengadilan Negeri Batanghari</span></h4>
+                    <h4 class="classic-title"><span>Peraturan Perundang-undangan</span></h4>
                     <?php
-                      $organisasi = DB::table('organisasi')->select('id','nama')->get();
+                      $organisasi = DB::table('peraturan')->select('id','nama')->get();
                     ?>
                     <ul class="listmenu">
-                    @foreach($organisasi as $p)
+                    @foreach($peraturan as $p)
                       <?php
-                              $url = URL::to("organisasi/".$p->id."/".generate_url($p->nama));
+                              $url = URL::to("peraturan/".$p->id."/".generate_url($p->nama));
                           ?>
                       <li><a href="{{$url}}">{{$p->nama}}</a></li>
                     @endforeach
