@@ -2,12 +2,16 @@
 <p class="hidden-xs">&nbsp;</p>
 <div class="sidemenu">
     <h4 class="classic-title"><span>Kepala Kejaksaan Negeri</span></h4>
-   
+    <img src="{{asset('images/poto-kejari.png')}}" class="img img-responsive">
 </div>
 <hr class="hidden-lg">
 <div class="sidemenu">
     <h4 class="classic-title"><span>Pejabat Struktural</span></h4>
-   
+    <?php
+    $pejabat = DB::table('pejabat')->get();
+    $pejabat_default = $pejabat[0];
+    ?>
+    
 </div>
 <hr class="hidden-lg">
 <div class="sidemenu">
@@ -43,3 +47,5 @@
     </ul>
 </div>
 <p class="hidden-xs">&nbsp;</p>
+
+
