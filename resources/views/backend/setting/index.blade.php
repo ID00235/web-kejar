@@ -22,7 +22,7 @@
                         <fieldset>      
                             <div class="col-md-12">
                                 <div class="form-group ">
-                                    <label>Alamat PPID</label>
+                                    <label>Alamat </label>
                                     <textarea name="alamat" class="form-control">{{$alamat}}</textarea>
                                 </div>
                             </div>
@@ -35,7 +35,7 @@
                             </div>    
                            <div class="col-md-6">
                                 <div class="form-group">
-                                    <label>Email Kecamatan </label>
+                                    <label>Email</label>
                                     <input class="form-control" name="email"  value="{{$email}}" placeholder="Masukan Email Kecamatan"
                                      type="text">
                                 </div>

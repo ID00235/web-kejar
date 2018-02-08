@@ -36,35 +36,6 @@
                       @endforeach
                 </div>
                  <p class="hidden-xs">&nbsp;</p>
-                 <div class="latest-posts-classic">
-                    <h4 class="classic-title"><span>Agenda Kegiatan</span>
-                    <small class="pull-right"><a href="{{url('semua-agenda')}}">Semua Agenda</a></small>
-                    </h4>
-                    <?php
-                      $agenda = DB::table('agenda')->orderby('tanggal_mulai','desc')->limit(5)->get();
-                    ?>
-                    @foreach($agenda as $pt)
-                    <?php
-                      $exp = explode(" ", tanggal_singkat_indo($pt->tanggal_mulai));
-                    ?>
-                    <div class="post-row item">
-                      <div class="left-meta-post">
-                        <div class="post-date">
-                            <span class="day">{{$exp[0]}}</span><span class="month">{{$exp[1]}}</span>
-                        </div>
-                      </div>
-                      <b>{{$pt->nama}}</b><br>
-                      <small>
-                          {{$pt->lokasi}}, 
-                          @if($pt->tanggal_selesai!='0000-00-00') 
-                              {{tanggal_singkat_indo($pt->tanggal_mulai)}} - {{tanggal_singkat_indo($pt->tanggal_selesai)}}
-                          @else 
-                              {{tanggal_singkat_indo($pt->tanggal_mulai)}}
-                          @endif
-                      </small>
-                    </div>
-                     @endforeach
-                  </div>
                 <p class="hidden-md hidden-lg">&nbsp;</p>
                 <p class="hidden-xs">&nbsp;</p>
                 <h4 class="classic-title"><span>Gallery Photo Kegiatan</span>
@@ -99,9 +70,9 @@
                 <p class="hidden-xs">&nbsp;</p>
                 <div class="sidemenu">
                     <p class="sidetitle">
-                      <center><img src="{{asset('images/menu3.png')}}"  class="hidden-xs"></center>
+                      <center><img src="{{asset('images/menu3.png')}}" class="hidden-xs"></center>
                     </p>
-                    <h4 class="classic-title hidden-lg hidden-md"><span>Data Umum</span></h4>
+                    <h4 class="classic-title hidden-lg hidden-md"><span>Kepala Kejaksaan Negeri</span></h4>
                     <?php
                     $dataumum = DB::table('dataangka')->select('id','nama')->get();
                     ?>
@@ -115,8 +86,8 @@
                     </ul>
                 </div>
                 <hr class="hidden-lg">
-                <center><img class="img img-responsive" width="90%" src="{{asset('pop-up/1.jpg')}}"></center>
-                <hr class="hidden-xs">
+                <center><img class="img img-responsive" width="100%" src="{{asset('pop-up/1.jpg')}}"></center>
+                <hr>
                 <div class="sidemenu">
                     <p class="sidetitle">
                       <center><img src="{{asset('images/menu4.png')}}"  class="hidden-xs"></center>
