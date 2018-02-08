@@ -57,7 +57,7 @@ $setting = DB::table('setting')->first();
                 </ul>
               </li>
 
-                <li @if($route=="sarana") class="active" @endif>
+              <li @if($route=="sarana") class="active" @endif>
                 <a href="#">Sarana</a>
                 <ul class="dropdown">
                   <?php
@@ -76,13 +76,6 @@ $setting = DB::table('setting')->first();
               <li @if($route=="gallery") class="active" @endif>
                 <a href="{{url::to("gallery-photo")}}">Gallery</a>
               </li>
-
-
-              <li @if($route=="konsultasi") class="active" @endif>
-                <a href="{{url('konsultasi')}}">Layanan Hukum</a>
-              </li>
-
-
             </ul>
             <!-- End Navigation List -->
           </div>
